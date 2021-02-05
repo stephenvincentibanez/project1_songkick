@@ -20,7 +20,7 @@ class APICommunicator
             city == stadium["city"]
             puts "========================".colorize(:green)
             puts stadium["name"].colorize(:green)
-        else
+        else 
             puts "========================".colorize(:green)
             puts "No stadiums found in this city.".colorize(:red)
         end
@@ -37,7 +37,7 @@ class APICommunicator
             away_team_name = Team.find_by(id: away_team_id)["name"]
             puts "========================".colorize(:green)
             puts "#{home_team_name} vs. #{away_team_name}".colorize(:green)
-        else
+        else 
             puts "========================".colorize(:green)
             puts "No games found on this date.".colorize(:red)
         end
@@ -61,7 +61,7 @@ class APICommunicator
                 puts "========================".colorize(:green)
                 puts "#{date}".colorize(:green)
                 puts "#{result.name} vs. #{home_team_name}".colorize(:green)
-
+                
                 else
                 home_games_obj = Game.find_by(home_team_id: result.id)
                 away_team_id = home_games_obj["away_team_id"]
@@ -75,7 +75,7 @@ class APICommunicator
                 puts "========================".colorize(:green)
                 puts "#{date}".colorize(:green)
                 puts "#{result.name} vs. #{away_team_name}".colorize(:green)
-            end
+            end 
         else puts "========================".colorize(:red)
             puts "No games found for this team.".colorize(:red)
         end
@@ -92,7 +92,7 @@ class APICommunicator
             puts "========================".colorize(:green)
             puts "#{home_team} vs. #{away_team}".colorize(:green)
             puts "#{the_date}".colorize(:green)
-        else
+        else 
             puts "========================".colorize(:red)
             puts "No games found at this stadium.".colorize(:red)
         end
